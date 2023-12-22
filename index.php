@@ -1,3 +1,7 @@
+<?php
+    require_once("BE/models/ProductModel.php");
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -53,7 +57,7 @@
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__option">
             <ul>
-                <li>USD <span class="arrow_carrot-down"></span>
+                <li>LBP <span class="arrow_carrot-down"></span>
                     <ul>
                         <li>LBP</li>
                         <li>USD</li>
@@ -80,19 +84,19 @@
                         <div class="header__top__inner">
                             <div class="header__top__left">
                                 <ul>
-                                    <li>USD <span class="arrow_carrot-down"></span>
+                                    <li>LBP <span class="arrow_carrot-down"></span>
                                         <ul>
-                                            <li>EUR</li>
+                                            <li>LBP</li>
                                             <li>USD</li>
                                         </ul>
                                     </li>
                                     <li>ENG <span class="arrow_carrot-down"></span>
                                         <ul>
-                                            <li>Spanish</li>
                                             <li>ENG</li>
+                                            <li>ARB</li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li>
+                                    <!-- <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li> -->
                                 </ul>
                             </div>
                             <div class="header__logo">
@@ -140,19 +144,7 @@
                         <div class="col-lg-8">
                             <div class="hero__text">
                                 <h2>Making your life sweeter one bite at a time!</h2>
-                                <a href="#" class="primary-btn">Our cakes</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero__item set-bg" data-setbg="img/hero/hero-1.jpg">
-                <div class="container">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="hero__text">
-                                <h2>Making your life sweeter one bite at a time!</h2>
-                                <a href="#" class="primary-btn">Our cakes</a>
+                                <a href="#" class="primary-btn">Check Out Our Manakish!</a>
                             </div>
                         </div>
                     </div>
@@ -204,9 +196,13 @@
         </div>
     </section>
     <!-- About Section End -->
+    
     <!-- Product Section Begin -->
     <section class="product spad">
         <div class="container">
+        <div class="breadcrumb__text">
+                        <h2 style="text-align:center;margin-bottom:30px;" id="menu">Menu</h2>
+                    </div>
         <?php
             $arr = getItems();
             for($i = 0; $i < sizeof($arr); $i++){
@@ -395,41 +391,41 @@
                     <div class="instagram__text">
                         <div class="section-title">
                             <span>Follow us on instagram</span>
-                            <h2>Sweet moments are saved as memories.</h2>
+                            <h2>Manouches are yummy nom nom</h2>
                         </div>
-                        <h5><i class="fa fa-instagram"></i> @sweetcake</h5>
+                        <h5><i class="fa fa-instagram"></i> @yourlocalmanouchestore</h5>
                     </div>
                 </div>
                 <div class="col-lg-8">
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-4 col-6">
                             <div class="instagram__pic">
-                                <img src="img/instagram/instagram-1.jpg" alt="">
+                                <img src="img/menu/zaatar.jpg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-6">
                             <div class="instagram__pic middle__pic">
-                                <img src="img/instagram/instagram-2.jpg" alt="">
+                                <img src="img/menu/cheese.jpg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-6">
                             <div class="instagram__pic">
-                                <img src="img/instagram/instagram-3.jpg" alt="">
+                                <img src="img/menu/cheese-and-zaatar.jpg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-6">
                             <div class="instagram__pic">
-                                <img src="img/instagram/instagram-4.jpg" alt="">
+                                <img src="img/menu/sojuk-and-cheese.jpg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-6">
                             <div class="instagram__pic middle__pic">
-                                <img src="img/instagram/instagram-5.jpg" alt="">
+                                <img src="img/menu/keshek.jpg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-6">
                             <div class="instagram__pic">
-                                <img src="img/instagram/instagram-3.jpg" alt="">
+                                <img src="img/menu/turkey-and-cheese.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -462,7 +458,7 @@
     <!-- Map End -->
 
     <!-- Footer Section Begin -->
-    <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+    <footer class="footer set-bg" style="background-color: black;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
@@ -478,10 +474,9 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                            <a href="#"><img src="img/logo.png" alt=""></a>
                         </div>
-                        <p>Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore dolore magna aliqua.</p>
+                        <p>Your local manouche store</p>
                         <div class="footer__social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
