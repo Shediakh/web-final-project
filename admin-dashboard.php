@@ -26,8 +26,18 @@
         // print_r($arr);
         return $arr;
     }
+    function changePermission($id, $permission) {
 
-    fetchUsers();
+        $db=DBConnect();
+        if($permission == 0) {
+            $query="UPDATE users SET `permission`= 1 WHERE ID=$id";
+        } else if($permission == 1) {
+            $query="UPDATE users SET `permission`= 0 WHERE ID=$id";
+        }
+    //echo $query;
+    $stmt=$db->query($query);
+    }
+    
 ?>
 
 
@@ -197,23 +207,31 @@
         </div>
         <div class="users">
             <div class="content">
-                <div class="list">
-                    <div class="ele">
-                        1
+                <?php
+                    $arr = fetchUsers();
+                    for($i = 0; $i < sizeof($arr); $i++) {
+                        echo '
+                        <div class="list">
+                        <div class="ele">
+                            1
+                        </div>
+                        <div class="ele">
+                            tarek123
+                        </div>
+                        <div class="ele">
+                            Tarek
+                        </div>
+                        <div class="ele">
+                            Hamze
+                        </div>
+                        <div class="ele">
+                            tarek@lau.edu
+                        </div>
                     </div>
-                    <div class="ele">
-                        tarek123
-                    </div>
-                    <div class="ele">
-                        Tarek
-                    </div>
-                    <div class="ele">
-                        Hamze
-                    </div>
-                    <div class="ele">
-                        tarek@lau.edu
-                    </div>
-                </div>
+                        ';
+                    }
+                ?>
+                
             </div>
             <div class="content">
                 <div class="permissions">
