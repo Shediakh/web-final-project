@@ -430,7 +430,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-7">
                     <div class="map__inner">
-                        <h6>COlorado</h6>
+                        <h6>Beirut</h6>
                         <ul>
                             <li>1000 Lakepoint Dr, Frisco, CO 80443, USA</li>
                             <li>Sweetcake@support.com</li>

@@ -214,8 +214,36 @@
                         tarek@lau.edu
                     </div>
                 </div>
+
+
+                <div class="list">
+                    <div class="ele">
+                        2
+                    </div>
+                    <div class="ele">
+                        hasan
+                    </div>
+                    <div class="ele">
+                        hasan
+                    </div>
+                    <div class="ele">
+                        shed
+                    </div>
+                    <div class="ele">
+                        hasan@lau.edu
+                    </div>
+                </div>
             </div>
             <div class="content">
+                <div class="permissions">
+                    <div class="el">
+                        User
+                    </div>
+                    <button class="el">
+                        Change permission
+                    </button>
+                </div>
+
                 <div class="permissions">
                     <div class="el">
                         User
