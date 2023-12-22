@@ -17,10 +17,9 @@ function DBConnect(){
 
 function addItem($user){
     $db=DBConnect();
-    $query="INSERT INTO users (`id`,`username`,`password`,``) VALUES ('$item->name','$item->description','$item->price','$item->image', )";
+    $query="INSERT INTO users (`id`,`username`,`password`,`email`, `firstname`, `lastname`) VALUES ('$user->username',PASSOWRD('$user->password'),'$user->email','$user->firstname', '$user->lastname')";
     //echo $query;
-    $stmt=$db->prepare($query);
-    $stmt->execute();
+    $stmt=$db->query($query);
     if ($stmt->rowCount()>0){
         session_start();
         $_SESSION["id"]=$db->lastInsertId();
