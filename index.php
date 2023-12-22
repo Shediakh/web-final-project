@@ -430,18 +430,18 @@
             <div class="row">
                 <div class="col-lg-4 col-md-7">
                     <div class="map__inner">
-                        <h6>Beirut</h6>
-                                <ul>
-                                    <li>Madame Curie St</li>
-                                    <li>ekhetman2oushe@support.com</li>
-                                    <li>+961 01 123 456</li>
-                                </ul>
+                        <h6>COlorado</h6>
+                        <ul>
+                            <li>1000 Lakepoint Dr, Frisco, CO 80443, USA</li>
+                            <li>Sweetcake@support.com</li>
+                            <li>+1 800-786-1000</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
         <div class="map__iframe">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.86949468671!2d35.47526121170301!3d33.89301477310573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f10cdf86989f9%3A0x920ea62c8299d366!2sLebanese%20American%20University!5e0!3m2!1sen!2slb!4v1703279882682!5m2!1sen!2slb"  height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10784.188505644011!2d19.053119335158936!3d47.48899529453826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1543907528304" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
     </div>
     <!-- Map End -->
@@ -490,9 +490,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7">
-                        <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <p class="copyright__text text-white">
+                            <script>document.write(new Date().getFullYear());</script> 
                       </p>
                   </div>
                   <div class="col-lg-5">
