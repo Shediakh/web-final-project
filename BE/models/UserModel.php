@@ -27,25 +27,31 @@ function DBConnect()
     return $db;
 }
 
-$db = DBConnect();
+
 $user = new stdClass();
 $user->email = VarExist($_POST["email"]);
 $user->pass = VarExist($_POST["password"]);
 $user->un = VarExist($_POST["username"]);
 $user->fn = VarExist($_POST["fname"]);
 $user->ln = VarExist($_POST["lname"]);
+addUser($user);
 
-$hashed_pass = password_hash($user->pass , PASSWORD_DEFAULT);
-$query = "INSERT INTO users (username,password, permission, email, firstname, lastname) VALUES ('$user->un','$user->pass', 0, '$user->email','$user->fn','$user->ln')";
-echo $query;
-$stmt = $db->query($query);
-if ($stmt->rowCount() > 0) {
-    session_start();
-    $_SESSION["id"] = $db->lastInsertId();
-    $_SESSION["username"] = $user->un;
-    return 1;
-} else {
-    return 0;
+function addUser($user)
+{
+
+    $db = DBConnect();
+
+    $hashed_pass = password_hash($user->pass, PASSWORD_DEFAULT);
+    $query = "INSERT INTO users (username,password, permission, email, firstname, lastname) VALUES ('$user->un','$user->pass', 0, '$user->email','$user->fn','$user->ln')";
+    echo $query;
+    $stmt = $db->query($query);
+    if ($stmt->rowCount() > 0) {
+        session_start();
+        $_SESSION["id"] = $db->lastInsertId();
+        $_SESSION["username"] = $user->un;
+        return 1;
+    } else {
+        return 0;
+    }
 }
-
 ?>
