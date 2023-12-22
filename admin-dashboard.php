@@ -246,7 +246,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                            <a href="#"><img src="img/logo.png" alt=""></a>
                         </div>
                         <p>Your local mankoushe store.</p>
                         <div class="footer__social">
