@@ -250,32 +250,9 @@
                         <div class="testimonial__item">
                             <div class="testimonial__author">
                                 <div class="testimonial__author__pic">
-                                    <img src="img/testimonial/ta-1.jpg" alt="">
                                 </div>
                                 <div class="testimonial__author__text">
-                                    <h5>Kerry D.Silva</h5>
-                                    <span>New york</span>
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star-half_alt"></span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="testimonial__item">
-                            <div class="testimonial__author">
-                                <div class="testimonial__author__pic">
-                                    <img src="img/testimonial/ta-2.jpg" alt="">
-                                </div>
-                                <div class="testimonial__author__text">
-                                    <h5>Sarah</h5>
+                                    <h5>Hassan</h5>
                                     <span>Beirut</span>
                                 </div>
                             </div>
@@ -286,18 +263,79 @@
                                 <span class="icon_star"></span>
                                 <span class="icon_star-half_alt"></span>
                             </div>
-                            <p>The Manooshe store is a delightful haven for lovers of Lebanese cuisine. With its aromatic flatbreads and authentic flavors, each bite is a savory journey to the heart of Beirut. A must-visit for an unforgettable Middle Eastern culinary experience.</p>
+                            <p>This place knows how to elevate the classic manouche. The Sojuk and Cheese Manouche stole the show for me; the spiced sojuk paired with the creamy cheese was a flavor explosion. The Sojuk Manouche was equally satisfying, showcasing the authenticity of the spiced sausage. The Cheese Manouche was simple perfection. I can't get enough of their inventive twists on tradition.</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="testimonial__item">
                             <div class="testimonial__author">
                                 <div class="testimonial__author__pic">
-                                    <img src="img/testimonial/ta-1.jpg" alt="">
+                                    <!-- <img src="img/testimonial/ta-2.jpg" alt=""> -->
                                 </div>
                                 <div class="testimonial__author__text">
-                                    <h5>Ophelia Nunez</h5>
-                                    <span>London</span>
+                                    <h5>Tarek</h5>
+                                    <span>Nabatiye</span>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                
+                            </div>
+                            <p>recently discovered this hidden gem of a manouche spot, and I'm hooked! The Zaatar Manouche was a burst of aromatic flavors, with the perfect balance of thyme and sesame. The Zaatar and Cheese Manouche took it up a notch with gooey richness, while the Turkey and Cheese Manouche was a delightful surprise — the thinly sliced turkey and melted cheese combination was pure bliss. A five-star treat for the taste buds!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="testimonial__item">
+                            <div class="testimonial__author">
+                                <div class="testimonial__author__pic">
+                                    <!-- <img src="img/testimonial/ta-1.jpg" alt=""> -->
+                                </div>
+                                <div class="testimonial__author__text">
+                                    <h5>Ahmed</h5>
+                                    <span>Baalbak</span>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                            </div>
+                            <p>As a fan of classic flavors, this manouche place hit all the right notes for me. The Cheese Manouche was simplicity at its best — golden, crispy, and cheesy. The Zaatar Manouche was a fragrant journey to the Middle East, while the Turkey and Cheese Manouche added a delightful twist with its succulent turkey slices. The perfect spot for those who appreciate the beauty of traditional Lebanese cuisine.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="testimonial__item">
+                            <div class="testimonial__author">
+                                <div class="testimonial__author__pic">
+                                </div>
+                                <div class="testimonial__author__text">
+                                    <h5>Christine</h5>
+                                    <span>Jbeil</span>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                            </div>
+                            <p>Bravo to this manouche joint! The Keshek Manouche was a unique revelation — the fermented bulgur wheat and tangy yogurt added a depth of flavor I never knew I needed. The Sojuk and Cheese Manouche brought a spicy kick to my taste buds, while the Meat Manouche showcased their mastery in balancing spices with succulent meats. A five-star haven for manouche lovers!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="testimonial__item">
+                            <div class="testimonial__author">
+                                <div class="testimonial__author__pic">
+                                </div>
+                                <div class="testimonial__author__text">
+                                    <h5>George</h5>
+                                    <span>Batroon</span>
                                 </div>
                             </div>
                             <div class="rating">
@@ -307,19 +345,17 @@
                                 <span class="icon_star"></span>
                                 <span class="icon_star-half_alt"></span>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                            <p>As a cheese enthusiast, this manouche spot is a dream come true! The Cheese Manouche was a comforting classic, and the Zaatar and Cheese Manouche added a zesty twist to the gooey goodness. The Turkey and Cheese Manouche showcased their commitment to quality ingredients. A cheese lover's paradise that exceeded my expectations.</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="testimonial__item">
                             <div class="testimonial__author">
                                 <div class="testimonial__author__pic">
-                                    <img src="img/testimonial/ta-2.jpg" alt="">
                                 </div>
                                 <div class="testimonial__author__text">
-                                    <h5>Kerry D.Silva</h5>
-                                    <span>New york</span>
+                                    <h5>Hussein</h5>
+                                    <span>Beirut</span>
                                 </div>
                             </div>
                             <div class="rating">
@@ -327,54 +363,8 @@
                                 <span class="icon_star"></span>
                                 <span class="icon_star"></span>
                                 <span class="icon_star"></span>
-                                <span class="icon_star-half_alt"></span>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="testimonial__item">
-                            <div class="testimonial__author">
-                                <div class="testimonial__author__pic">
-                                    <img src="img/testimonial/ta-1.jpg" alt="">
-                                </div>
-                                <div class="testimonial__author__text">
-                                    <h5>Ophelia Nunez</h5>
-                                    <span>London</span>
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star-half_alt"></span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="testimonial__item">
-                            <div class="testimonial__author">
-                                <div class="testimonial__author__pic">
-                                    <img src="img/testimonial/ta-2.jpg" alt="">
-                                </div>
-                                <div class="testimonial__author__text">
-                                    <h5>Kerry D.Silva</h5>
-                                    <span>New york</span>
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star-half_alt"></span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                            <p>I've found my new favorite spot for manouche! The Turkey and Cheese Manouche was a delightful surprise, with the thinly sliced turkey adding a lean and savory touch. The Sojuk Manouche transported me back to the streets of Lebanon with its authentic flavors. And the Keshek Manouche, with its unique combination of fermented bulgur wheat and tangy yogurt, was a revelation. Absolutely delicious!</p>
                         </div>
                     </div>
                 </div>

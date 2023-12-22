@@ -23,7 +23,8 @@
         while ($obj = $stmt->fetch(PDO::FETCH_OBJ)) {
             $arr[]=$obj;
         }
-        echo $arr;
+        // print_r($arr);
+        return $arr;
     }
 
     fetchUsers();
