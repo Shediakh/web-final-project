@@ -13,7 +13,7 @@ function DBConnect() {
     $dbhost="127.0.0.1";
     $dbname="manouche";
     $dbuser="root";
-    $dbpass="root";
+    $dbpass="";
     $db=null;
     try {
         $db = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);		
@@ -25,14 +25,20 @@ function DBConnect() {
     return $db;
 }
 
+    $db = DBConnect();
     $prod = new stdClass();
     $prod->p_name = VarExist($_POST["product_name"]);
     $prod->p_price = VarExist($_POST["product_price"]);
     $prod->p_desc = VarExist($_POST["product_desc"]);
-    $prod->p_img = VarExist($_POST["product_image"]);
+    $prod->p_img = VarExist($_FILES["product_image"]["name"]);
+    $folder = "img/menu/" . $prod->p_img;
 
-    $query = "INSERT INTO (name, description, price, image) VALUES(".$prod->p_name.",".$prod->desc.",".$prod->price.",".$prod->p_img.");";
+
+    $query = "INSERT INTO menu (name, description, price, image) VALUES('".$prod->p_name."','".$prod->p_desc."','".$prod->p_price."','".$folder."');";
     $stmt = $db->query($query);
+
+
+
 
 
 ?>

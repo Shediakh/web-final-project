@@ -1,3 +1,35 @@
+<?php
+     function DBConnect() {
+        $dbhost="127.0.0.1";
+        $dbname="manouche";
+        $dbuser="root";
+        $dbpass="";
+        $db=null;
+        try {
+            $db = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);		
+        } catch (PDOException $e) {
+            print "Error!: " . $e->getMessage() . "<br/>";
+            $db=null;
+            die();
+        }
+        return $db;
+    }
+
+    function fetchUsers() {
+        $db = DBConnect();
+        $query = "SELECT * FROM users";
+        $stmt=$db->query($query);
+        $arr=array();
+        while ($obj = $stmt->fetch(PDO::FETCH_OBJ)) {
+            $arr[]=$obj;
+        }
+        echo $arr;
+    }
+
+    fetchUsers();
+?>
+
+
 <!DOCTYPE html>
 <html lang="zxx">
 
