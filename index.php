@@ -121,7 +121,7 @@
                         <ul>
                             <li class="active"><a href="./index.html">Home</a></li>
                             <li><a href="./about.html">About</a></li>
-                            <li><a href="./shop.html">Shop</a></li>
+                            <li><a href="./shop.php">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="dropdown">
                                     <li><a href="./shop-details.html">Shop Details</a></li>
@@ -132,7 +132,7 @@
                                     <li><a href="./blog-details.html">Blog Details</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./blog.html">Admin Dashboard</a></li>
+                            <li><a href="./admin-dashboard.html">Admin Dashboard</a></li>
                             <li><a href="./contact.html">Contact</a></li>
                         </ul>
                     </nav>

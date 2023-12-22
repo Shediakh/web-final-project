@@ -1,3 +1,7 @@
+<?php
+    require_once("BE/models/ProductModel.php")
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -170,43 +174,18 @@
                 <div class="col-lg-6">
                     <div class="product__details__img">
                         <div class="product__details__big__img">
-                            <img class="big_img" src="img/shop/details/product-big-1.jpg" alt="">
+                            <img class="big_img" src="img/menu/<?php echo $_GET["image"];?>" alt="">
                         </div>
-                        <div class="product__details__thumb">
-                            <div class="pt__item active">
-                                <img data-imgbigurl="img/shop/details/product-big-2.jpg"
-                                src="img/shop/details/product-big-2.jpg" alt="">
-                            </div>
-                            <div class="pt__item">
-                                <img data-imgbigurl="img/shop/details/product-big-1.jpg"
-                                src="img/shop/details/product-big-1.jpg" alt="">
-                            </div>
-                            <div class="pt__item">
-                                <img data-imgbigurl="img/shop/details/product-big-4.jpg"
-                                src="img/shop/details/product-big-4.jpg" alt="">
-                            </div>
-                            <div class="pt__item">
-                                <img data-imgbigurl="img/shop/details/product-big-3.jpg"
-                                src="img/shop/details/product-big-3.jpg" alt="">
-                            </div>
-                            <div class="pt__item">
-                                <img data-imgbigurl="img/shop/details/product-big-5.jpg"
-                                src="img/shop/details/product-big-5.jpg" alt="">
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="product__details__text">
-                        <div class="product__label">Cupcake</div>
-                        <h4>SWEET AUTUMN LEAVES</h4>
-                        <h5>$26.41</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida</p>
+                        <h4><?php echo $_GET["name"];?></h4>
+                        <h5><?php echo $_GET["price"];?> LBP</h5>
+                        <p><?php echo $_GET["description"];?></p>
                         <ul>
-                            <li>SKU: <span>17</span></li>
-                            <li>Category: <span>Biscuit cake</span></li>
-                            <li>Tags: <span>Gadgets, minimalisstic</span></li>
+                            <li>Category: <span>Manouche</span></li>
                         </ul>
                         <div class="product__details__option">
                             <div class="quantity">
@@ -220,55 +199,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product__details__tab">
-                <div class="col-lg-12">
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Description</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Additional information</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">Previews(1)</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="tabs-1" role="tabpanel">
-                            <div class="row d-flex justify-content-center">
-                                <div class="col-lg-8">
-                                    <p>This delectable Strawberry Pie is an extraordinary treat filled with sweet and
-                                        tasty chunks of delicious strawberries. Made with the freshest ingredients, one
-                                        bite will send you to summertime. Each gift arrives in an elegant gift box and
-                                    arrives with a greeting card of your choice that you can personalize online!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="tabs-2" role="tabpanel">
-                            <div class="row d-flex justify-content-center">
-                                <div class="col-lg-8">
-                                    <p>This delectable Strawberry Pie is an extraordinary treat filled with sweet and
-                                        tasty chunks of delicious strawberries. Made with the freshest ingredients, one
-                                        bite will send you to summertime. Each gift arrives in an elegant gift box and
-                                        arrives with a greeting card of your choice that you can personalize online!2
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="tabs-3" role="tabpanel">
-                            <div class="row d-flex justify-content-center">
-                                <div class="col-lg-8">
-                                    <p>This delectable Strawberry Pie is an extraordinary treat filled with sweet and
-                                        tasty chunks of delicious strawberries. Made with the freshest ingredients, one
-                                        bite will send you to summertime. Each gift arrives in an elegant gift box and
-                                        arrives with a greeting card of your choice that you can personalize online!3
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </section>
     <!-- Shop Details Section End -->
@@ -284,25 +215,43 @@
                 </div>
             </div>
             <div class="row">
-                <div class="related__products__slider owl-carousel">
-                    <div class="col-lg-3">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-1.jpg">
-                                <div class="product__label">
-                                    <span>Cupcake</span>
+            <div class="related__products__slider owl-carousel">
+                <?php
+                $name = $_GET['name'];
+                $name = $_GET['description'];
+                $name = $_GET['price'];
+                $name = $_GET['name'];
+                $arr = getItems();
+                $count = 0;
+                    for($i = 0; $i < sizeof($arr); $i++) {
+                        if($arr[$i]->name == $name) {
+                            continue;
+                        }
+                        echo '
+                        <div class="col-lg-3">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/menu/'.$arr[$i]->image.'.jpg">
                                 </div>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Dozen Cupcakes</a></h6>
-                                <div class="product__item__price">$32.00</div>
-                                <div class="cart_add">
-                                    <a href="#">Add to cart</a>
+                                <div class="product__item__text">
+                                    <h6><a href="#">'.$arr[$i]->name.'</a></h6>
+                                    <div class="product__item__price">'.$arr[$i]->price.' LBP</div>
+                                    <div class="cart_add">
+                                        <a href="?name='.$arr[$i]->name.'&price='.$arr[$i]->price.'&description='.$arr[$i]->description.'&image='.$arr[$i]->image.'">View more</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    
+                        
+                        ';
+                        $count++;
+                        if($count == 4) {
+                            break;
+                        }
+                    }
+                ?>
                 </div>
+
+                
             </div>
         </div>
     </section>
