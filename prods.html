@@ -156,17 +156,18 @@
     <section class="blog spad">
         <div class="users">
             <div class="content">
-                <form action="addProd.php" method="post" enctype="multipart/form-data">
+                <form action="./BE/models/addProd.php" method="post" enctype="multipart/form-data">
                     <h2>Add a new product</h2><br><br><br>
                     <input type="text" placeholder="Enter product name" name="product_name" class="box"><br><br>
                     <input type="number" placeholder="Enter product price" name="product_price" class="box"><br><br>
+                    <input type="text" placeholder="Enter product description" name="product_desc" class="box" size="50"><br><br>
                     <input type="file" accept="image/png, image/jpeg, image/jpg" name="product_image" class="box"><br><br>
                     <input type="submit" class="btn" name="add_product" value="Add Product"><br><br>
                 </form>
             </div>
 
             <div class="content">
-                <form action="deleteProd.php" method="post" enctype="multipart/form-data">
+                <form action="./BE/models/deleteProd.php" method="post" enctype="multipart/form-data">
                     <h2>Delete product</h2><br><br><br>
                     <input type="text" placeholder="Enter product name" name="product_name" class="box"><br><br>
                     <input type="submit" class="btn" name="add_product" value="Delete Product"><br><br>

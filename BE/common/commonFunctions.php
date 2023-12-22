@@ -9,8 +9,6 @@ function VarExist($var){
 
 
 
-
-
 function DBConnect(){
     $dbhost="127.0.0.1";
     $dbname="manouche";

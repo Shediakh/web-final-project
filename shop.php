@@ -1,5 +1,5 @@
 <?php
-require_once("BE/models/ProductModel.php");
+require_once("./BE/models/ProductModel.php");
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
