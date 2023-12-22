@@ -124,8 +124,7 @@
                     <nav class="header__menu mobile-menu">
                         <ul>
                             <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./shop.php">Shop</a></li>
-                            <li><a href="./admin-dashboard.html">Admin Dashboard</a></li>
+                            <li><a href="./admin-dashboard.php">Admin Dashboard</a></li>
                             <li><a href="./contact.html">Contact</a></li>
                         </ul>
                     </nav>
@@ -143,8 +142,8 @@
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-8">
                             <div class="hero__text">
-                                <h2>Making your life sweeter one bite at a time!</h2>
-                                <a href="#" class="primary-btn">Check Out Our Manakish!</a>
+                                <h2>Savoring the essence of Lebanon, one manouche at a time, for a taste that lingers with every delicious bite!</h2>
+                                <a href="#menu" class="primary-btn">Check Out Our Manakish!</a>
                             </div>
                         </div>
                     </div>
@@ -431,18 +430,18 @@
             <div class="row">
                 <div class="col-lg-4 col-md-7">
                     <div class="map__inner">
-                        <h6>COlorado</h6>
-                        <ul>
-                            <li>1000 Lakepoint Dr, Frisco, CO 80443, USA</li>
-                            <li>Sweetcake@support.com</li>
-                            <li>+1 800-786-1000</li>
-                        </ul>
+                        <h6>Beirut</h6>
+                                <ul>
+                                    <li>Madame Curie St</li>
+                                    <li>ekhetman2oushe@support.com</li>
+                                    <li>+961 01 123 456</li>
+                                </ul>
                     </div>
                 </div>
             </div>
         </div>
         <div class="map__iframe">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10784.188505644011!2d19.053119335158936!3d47.48899529453826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1543907528304" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.86949468671!2d35.47526121170301!3d33.89301477310573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f10cdf86989f9%3A0x920ea62c8299d366!2sLebanese%20American%20University!5e0!3m2!1sen!2slb!4v1703279882682!5m2!1sen!2slb"  height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
     <!-- Map End -->
