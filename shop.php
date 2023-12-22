@@ -124,7 +124,7 @@ require_once("./BE/models/ProductModel.php");
                         <ul>
                             <li class="active"><a href="./shop.html">Shop</a></li>
                             </li>
-                            <li><a href="./admin-dashboard.html">Admin Dashboard</a></li>
+                            <li><a href="./admin-dashboard.php">Admin Dashboard</a></li>
                             <li><a href="./contact.html">Contact</a></li>
                         </ul>
                     </nav>
