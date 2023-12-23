@@ -1,9 +1,9 @@
 <?php
     require_once("BE/models/ProductModel.php");
     session_start();
-    if (!isset($_SESSION["username"]) || !isset($_SESSION["permission"])){
-        header("location:index.php");
-    }
+    // if (!isset($_SESSION["username"]) || !isset($_SESSION["permission"])){
+    //     header("location:index.php");
+    // }
 ?>
 
 <!DOCTYPE html>

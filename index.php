@@ -11,7 +11,7 @@
             </div>
             <div class="row clearfix">
                 <div class="">
-                    <form action="./BE/controllers/login.php" method="post" enctype="multipart/form-data">
+                    <form action="BE/controllers/login.php" method="post" enctype="multipart/form-data">
                         <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
                             <input type="text" name="username" placeholder="Username" required />
                         </div>
