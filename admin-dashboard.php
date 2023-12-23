@@ -211,22 +211,54 @@
                     for($i = 0; $i < sizeof($arr); $i++) {
                         echo '
                         <div class="list">
-                            <div class="ele">
-                                '.$arr[$i]->id.'
-                            </div>
-                            <div class="ele">
-                            '.$arr[$i]->username.'
-                            </div>
-                            <div class="ele">
-                            '.$arr[$i]->firstname.'
-                            </div>
-                            <div class="ele">
-                            '.$arr[$i]->lastname.'
-                            </div>
-                            <div class="ele">
-                            '.$arr[$i]->email.'                        
-                            </div>
+                        <div class="ele">
+                            1
                         </div>
+                        <div class="ele">
+                            tarek123
+                        </div>
+                        <div class="ele">
+                            Tarek
+                        </div>
+                        <div class="ele">
+                            Hamze
+                        </div>
+                        <div class="ele">
+                            tarek@lau.edu
+                        </div>
+                    </div>
+                    <div class="ele">
+                        tarek123
+                    </div>
+                    <div class="ele">
+                        Tarek
+                    </div>
+                    <div class="ele">
+                        Hamze
+                    </div>
+                    <div class="ele">
+                        tarek@lau.edu
+                    </div>
+                </div>
+
+
+                <div class="list">
+                    <div class="ele">
+                        2
+                    </div>
+                    <div class="ele">
+                        hasan
+                    </div>
+                    <div class="ele">
+                        hasan
+                    </div>
+                    <div class="ele">
+                        shed
+                    </div>
+                    <div class="ele">
+                        hasan@lau.edu
+                    </div>
+                </div>
                         ';
                     }
                 ?>
