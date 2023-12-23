@@ -4,7 +4,7 @@ function VarExist($var)
     if (isset($var)) {
         return $var;
     } else {
-        header("location:../index.php");
+        header("location:../../index.php");
     }
 }
 
@@ -34,9 +34,7 @@ $user->pass = VarExist($_POST["password"]);
 $user->un = VarExist($_POST["username"]);
 $user->fn = VarExist($_POST["fname"]);
 $user->ln = VarExist($_POST["lname"]);
-if(addUser($user)==1) {
-    header("location: ../../login.html");
-}
+
 
 function addUser($user)
 {
@@ -53,6 +51,9 @@ function addUser($user)
     } else {
         return 0;
     }
+}
+if(addUser($user)==1) {
+    header("location: ../../login.php");
 }
 
 

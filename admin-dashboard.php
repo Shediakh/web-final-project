@@ -1,4 +1,11 @@
 <?php
+    require_once("BE/models/ProductModel.php");
+    session_start();
+    if (!isset($_SESSION["username"]) || !isset($_SESSION["permission"])){
+        header("location:index.php");
+    }
+?>
+<?php
      function DBConnect() {
         $dbhost="127.0.0.1";
         $dbname="manouche";
@@ -185,7 +192,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__links">
-                        <a href="./prods.html">Product Operations</a>
+                        <a href="./prods.php">Product Operations</a>
                         <span>Admin Dashboard</span>
                     </div>
                 </div>

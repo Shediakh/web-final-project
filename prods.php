@@ -1,3 +1,11 @@
+<?php
+    require_once("BE/models/ProductModel.php");
+    session_start();
+    if (!isset($_SESSION["username"]) || !isset($_SESSION["permission"])){
+        header("location:index.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -122,7 +130,7 @@
                         <ul>       
                             <li><a href="./index.php">Home</a></li>
                             <li><a href="./admin-dashboard.php">Admin Dashboard</a></li>
-                            <li class="active"><a href="./contact.html">Contact</a></li>
+                            <li class="active"><a href="./contact.php">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -142,7 +150,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__links">
-                        <a href="./admin-dashboard.html">Back to dashboard</a>
+                        <a href="./admin-dashboard.php">Back to dashboard</a>
                         <span>Operations</span>
                     </div>
                 </div>
@@ -154,7 +162,7 @@
     <!-- Blog Section Begin -->
     <section class="blog spad">
         <div class="users">
-            <div class="content">
+            <div class="content" style="margin-left: 20%;">
                 <form action="./BE/controllers/addProd.php" method="post" enctype="multipart/form-data">
                     <h2>Add a new product</h2><br><br><br>
                     <input type="text" placeholder="Enter product name" name="product_name" class="box"><br><br>
@@ -165,7 +173,7 @@
                 </form>
             </div>
 
-            <div class="content">
+            <div class="content" style="margin-left: 10%;">
                 <form action="./BE/controllers/deleteProd.php" method="post" enctype="multipart/form-data">
                     <h2>Delete product</h2><br><br><br>
                     <input type="text" placeholder="Enter product name" name="product_name" class="box"><br><br>

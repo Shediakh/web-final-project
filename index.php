@@ -1,5 +1,11 @@
 <?php
     require_once("BE/models/ProductModel.php");
+    session_start();
+    $_SESSION["username"] = $user->un;
+    $_SESSION["permission"] = $perm;
+    if (!isset($_SESSION["username"])){
+        header("location:login.html");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -124,8 +130,12 @@
                     <nav class="header__menu mobile-menu">
                         <ul>
                             <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./admin-dashboard.php">Admin Dashboard</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <?php
+                                if($_SESSION["permission"] == 1) {
+                                    echo '<li><a href="./admin-dashboard.php">Admin Dashboard</a></li>';
+                                }
+                            ?>
+                            <li><a href="./contact.php">Contact</a></li>
                         </ul>
                     </nav>
                 </div>

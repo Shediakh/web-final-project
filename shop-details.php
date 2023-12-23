@@ -124,8 +124,12 @@
                     <nav class="header__menu mobile-menu">
                         <ul>
                             <li><a href="./index.php">Home</a></li>
-                            <li class="active"><a href="./shop.php">Shop</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <?php
+                            if($_SESSION["permission"] == 1) {
+                                echo '<li><a href="./admin-dashboard.php">Admin Dashboard</a></li>';
+                            }
+                        ?>
+                            <li><a href="./contact.php">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
