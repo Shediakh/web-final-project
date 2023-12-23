@@ -1,7 +1,7 @@
 <?php
     require_once("BE/models/ProductModel.php");
     session_start();
-    if (!isset($_SESSION["username"]) || !isset($_SESSION["permission"])){
+    if (!isset($_SESSION["permission"])){
         header("location:home.php");
     }
      function DBConnect() {
@@ -38,7 +38,7 @@
         } else if($permission == 1) {
             $query="UPDATE users SET `permission`= 0 WHERE ID=$id";
         }
-    //echo $query;
+        
     $stmt=$db->query($query);
     }
     

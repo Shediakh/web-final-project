@@ -1,11 +1,6 @@
 <?php
     require_once("BE/models/ProductModel.php");
     session_start();
-    $_SESSION["username"] = $user->un;
-    $_SESSION["permission"] = $perm;
-    if (!isset($_SESSION["username"])){
-        header("location: index.php");
-    }
 ?>
 
 <!DOCTYPE html>

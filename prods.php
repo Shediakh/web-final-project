@@ -1,49 +1,10 @@
 <?php
     require_once("BE/models/ProductModel.php");
     session_start();
-    if (!isset($_SESSION["username"]) || !isset($_SESSION["permission"])){
-        header("location:home.php");
-    }
-     function DBConnect() {
-        $dbhost="127.0.0.1";
-        $dbname="manouche";
-        $dbuser="root";
-        $dbpass="";
-        $db=null;
-        try {
-            $db = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);		
-        } catch (PDOException $e) {
-            print "Error!: " . $e->getMessage() . "<br/>";
-            $db=null;
-            die();
-        }
-        return $db;
-    }
-
-    function fetchUsers() {
-        $db = DBConnect();
-        $query = "SELECT * FROM users";
-        $stmt=$db->query($query);
-        $arr=array();
-        while ($obj = $stmt->fetch(PDO::FETCH_OBJ)) {
-            $arr[]=$obj;
-        }
-        return $arr;
-    }
-    function changePermission($id, $permission) {
-
-        $db=DBConnect();
-        if($permission == 0) {
-            $query="UPDATE users SET `permission`= 1 WHERE ID=$id";
-        } else if($permission == 1) {
-            $query="UPDATE users SET `permission`= 0 WHERE ID=$id";
-        }
-    //echo $query;
-    $stmt=$db->query($query);
-    }
-    
+    // if (!isset($_SESSION["username"]) || !isset($_SESSION["permission"])){
+    //     header("location:index.php");
+    // }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="zxx">

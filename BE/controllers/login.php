@@ -31,6 +31,10 @@ $user = new stdClass();
 $user->pass = VarExist($_POST["password"]);
 $user->un = VarExist($_POST["username"]);
 
+
+session_start();
+
+
 $query = "SELECT id, username, password, permission FROM users";
 $stmt = $db->query($query);
 $arr = array();
@@ -40,18 +44,15 @@ while ($obj = $stmt->fetch(PDO::FETCH_OBJ)) {
 $flag = false; 
 $perm = 0;
 for ($i = 0; $i < sizeof($arr); $i++) {
-    if($user->un==$arr[$i]->username && $arr[$i]->password===$user->pass) {
-        $perm = $arr[$i]->permission;
+    if($user->un===$arr[$i]->username && $arr[$i]->password===$user->pass) {
         $flag = true;
+        $_SESSION["permission"] = $arr[$i]->permission;
         break;
     }
 }
 print_r($arr);
 if($flag) {
-    session_start();
-    $_SESSION["username"] = $user->un;
-    $_SESSION["permission"] = $perm;
-    header('location:../../home.php');
+    header("location:../../home.php");
 }
 else {
     echo '<script> alert("User not found or incorrect password!"); </script>';
