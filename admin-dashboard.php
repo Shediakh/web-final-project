@@ -213,19 +213,22 @@
                         echo '
                         <div class="list">
                         <div class="ele">
-                            1
+                            '.$arr[$i]->id.'
                         </div>
                         <div class="ele">
-                            tarek123
+                            '.$arr[$i]->username.'
                         </div>
                         <div class="ele">
-                            Tarek
+                        '.$arr[$i]->firstname.'
                         </div>
                         <div class="ele">
-                            Hamze
+                        '.$arr[$i]->lastname.'
                         </div>
                         <div class="ele">
-                            tarek@lau.edu
+                        '.$arr[$i]->email.'
+                        </div>
+                        <div class="ele">
+                        '.$arr[$i]->permission.'
                         </div>
                     </div>
                         ';
