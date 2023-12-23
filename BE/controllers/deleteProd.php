@@ -3,7 +3,7 @@
         if (isset($var)){
             return $var;
         }else{
-            header("location:../index.php");
+            header("location:../../index.php");
         }
     }
     
@@ -33,4 +33,5 @@
 
     $query->execute();
 
+    
 ?>

@@ -4,6 +4,7 @@ function VarExist($var)
     if (isset($var)) {
         return $var;
     } else {
+        echo '<script> alert("Enter fields correctly!"); </script>';
         header("location:../../index.php");
     }
 }
@@ -53,7 +54,7 @@ function addUser($user)
     }
 }
 if(addUser($user)==1) {
-    header("location: ../../login.php");
+    header("location: ../../index.php");
 }
 
 

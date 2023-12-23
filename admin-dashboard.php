@@ -2,7 +2,7 @@
     require_once("BE/models/ProductModel.php");
     session_start();
     if (!isset($_SESSION["username"]) || !isset($_SESSION["permission"])){
-        header("location:index.php");
+        header("location:home.php");
     }
 ?>
 <?php
@@ -99,7 +99,7 @@
             </div>
         </div>
         <div class="offcanvas__logo">
-            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+            <a href="./home.php"><img src="img/logo.png" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__option">
@@ -147,7 +147,7 @@
                                 </ul>
                             </div>
                             <div class="header__logo">
-                                <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                                <a href="./homr.php"><img src="img/logo.png" alt=""></a>
                             </div>
                             <div class="header__top__right">
                                 <div class="header__top__right__links">
@@ -170,9 +170,9 @@
                 <div class="col-lg-12">
                     <nav class="header__menu mobile-menu">
                         <ul>       
-                            <li><a href="./index.php">Home</a></li>
-                            <li class="active"><a href="./admin-dashboard.html">Admin Dashboard</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <li><a href="./home.php">Home</a></li>
+                            <li class="active"><a href="./admin-dashboard.php">Admin Dashboard</a></li>
+                            <li><a href="./contact.php">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
