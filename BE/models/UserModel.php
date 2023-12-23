@@ -4,6 +4,7 @@ function VarExist($var)
     if (isset($var)) {
         return $var;
     } else {
+        echo '<script> alert("Enter fields correctly!"); </script>';
         header("location:../../index.php");
     }
 }
