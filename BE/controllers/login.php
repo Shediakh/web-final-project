@@ -1,5 +1,4 @@
 <?php
-
 function VarExist($var)
 {
     if (isset($var)) {
@@ -32,18 +31,26 @@ $user = new stdClass();
 $user->pass = VarExist($_POST["password"]);
 $user->un = VarExist($_POST["username"]);
 
-$query = "SELECT username, password FROM users";
+$query = "SELECT id, username, password FROM users";
 $stmt = $db->query($query);
 $arr = array();
 while ($obj = $stmt->fetch(PDO::FETCH_OBJ)) {
     $arr[] = $obj;
 }
-print_r($arr);
-// for ($i = 0; $i < sizeof($arr); $i++) {
-//     if($un==$arr[$i]->username && password_verify($arr[$i]->password, $pass)) {
+$flag = false; 
+for ($i = 0; $i < sizeof($arr); $i++) {
+    if($user->un==$arr[$i]->username && $arr[$i]->password==$user->pass) {
+        $flag = true;
+        break;
+    }
+}
 
-//     }
-// }
-
+if($flag) {
+    header('location: ../../index.php');
+}
+else {
+    echo '<script> alert("User not found"); </script>';
+    echo '<script> window.location.replace("../../login.html");</script>';
+}
 
 ?>
