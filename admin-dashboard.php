@@ -23,7 +23,6 @@
         while ($obj = $stmt->fetch(PDO::FETCH_OBJ)) {
             $arr[]=$obj;
         }
-        // print_r($arr);
         return $arr;
     }
     function changePermission($id, $permission) {
@@ -212,77 +211,50 @@
                     for($i = 0; $i < sizeof($arr); $i++) {
                         echo '
                         <div class="list">
-                        <div class="ele">
-                            1
+                            <div class="ele">
+                                '.$arr[$i]->id.'
+                            </div>
+                            <div class="ele">
+                            '.$arr[$i]->username.'
+                            </div>
+                            <div class="ele">
+                            '.$arr[$i]->firstname.'
+                            </div>
+                            <div class="ele">
+                            '.$arr[$i]->lastname.'
+                            </div>
+                            <div class="ele">
+                            '.$arr[$i]->email.'                        
+                            </div>
                         </div>
-                        <div class="ele">
-                            tarek123
-                        </div>
-                        <div class="ele">
-                            Tarek
-                        </div>
-                        <div class="ele">
-                            Hamze
-                        </div>
-                        <div class="ele">
-                            tarek@lau.edu
-                        </div>
-                    </div>
-                    <div class="ele">
-                        tarek123
-                    </div>
-                    <div class="ele">
-                        Tarek
-                    </div>
-                    <div class="ele">
-                        Hamze
-                    </div>
-                    <div class="ele">
-                        tarek@lau.edu
-                    </div>
-                </div>
-
-
-                <div class="list">
-                    <div class="ele">
-                        2
-                    </div>
-                    <div class="ele">
-                        hasan
-                    </div>
-                    <div class="ele">
-                        hasan
-                    </div>
-                    <div class="ele">
-                        shed
-                    </div>
-                    <div class="ele">
-                        hasan@lau.edu
-                    </div>
-                </div>
                         ';
                     }
                 ?>
                 
             </div>
             <div class="content">
-                <div class="permissions">
-                    <div class="el">
-                        User
+            <?php
+                    for ($i = 0; $i < sizeof($arr); $i++) {
+                            $p = 'User';
+                            if ($arr[$i]->permission == 1) {
+                                $p = 'Admin';
+                            }
+                            echo '
+                    <div class="permissions">
+                        <div class="el">
+                            ' . $p . '
+                        </div>';
+                        ?>
+                        <form action="admin-dashboard.php" method="post">
+                     <input type="submit" name="someAction" value="Change Permission" />
+                        </form>
                     </div>
-                    <button class="el">
-                        Change permission
-                    </button>
-                </div>
-
-                <div class="permissions">
-                    <div class="el">
-                        User
-                    </div>
-                    <button class="el">
-                        Change permission
-                    </button>
-                </div>
+                    <?php
+                    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['someAction']))
+                    {
+                        changePermission($arr[$i]->id, $arr[$i]->permission);
+                    }
+                        }?>
             </div>
         </div>
     </section>
