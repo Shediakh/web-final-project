@@ -32,8 +32,6 @@ $user->pass = VarExist($_POST["password"]);
 $user->un = VarExist($_POST["username"]);
 
 
-session_start();
-
 
 $query = "SELECT id, username, password, permission FROM users";
 $stmt = $db->query($query);
@@ -46,12 +44,15 @@ $perm = 0;
 for ($i = 0; $i < sizeof($arr); $i++) {
     if($user->un===$arr[$i]->username && $arr[$i]->password===$user->pass) {
         $flag = true;
-        $_SESSION["permission"] = $arr[$i]->permission;
+        $perm = $arr[$i]->permission;
         break;
     }
 }
 print_r($arr);
 if($flag) {
+    session_start();
+    $_SESSION["permission"] = $perm;
+    $_SESSION["username"] = $user->un;
     header("location:../../home.php");
 }
 else {

@@ -1,7 +1,6 @@
 <?php
-    require_once("BE/models/ProductModel.php");
     session_start();
-    if (!isset($_SESSION["permission"])){
+    if (!isset($_SESSION["username"])){
         header("location:home.php");
     }
      function DBConnect() {
@@ -248,18 +247,17 @@
                     <div class="permissions">
                         <div class="el">
                             ' . $p . '
-                        </div>';
-                        ?>
+                        </div>
                         <form action="admin-dashboard.php" method="post">
                      <input type="submit" name="someAction" value="Change Permission" />
                         </form>
-                    </div>
-                    <?php
+                    </div>';
                     if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['someAction']))
                     {
                         changePermission($arr[$i]->id, $arr[$i]->permission);
                     }
-                        }?>
+                        }
+                ?>
             </div>
         </div>
     </section>
