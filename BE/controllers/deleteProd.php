@@ -33,6 +33,6 @@
 
     $query->execute();
 
-    header('location:../prods.php');
+    header('location:../../prods.php');
 
 ?>
