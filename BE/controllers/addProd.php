@@ -32,10 +32,10 @@ function DBConnect() {
     $prod->p_desc = VarExist($_POST["product_desc"]);
     $prod->p_img = VarExist($_FILES["product_image"]["name"]);
     $product_image_tmp_name = $_FILES['product_image']['tmp_name'];
-    $product_image_folder = '../img/menu/' . $prod->p_img;
-    
+    $product_image_folder = '../../img/menu/' . $prod->p_img;
    
     $query = "INSERT INTO menu (name, description, price, image) VALUES('".$prod->p_name."','".$prod->p_desc."','".$prod->p_price."','".$product_image_folder."');";
     $stmt = $db->query($query);
-    header('location:../prods.php');
+    move_uploaded_file($product_image_tmp_name,$product_image_folder);
+    header('location:../../prods.php');
 ?>
