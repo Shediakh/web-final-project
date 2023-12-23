@@ -69,7 +69,7 @@
                         <li>ENG</li>
                     </ul>
                 </li>
-                <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li>
+                <li><a href="BE/controllers/logout.php">Logout</a> </li>
             </ul>
         </div>
     </div>
@@ -96,7 +96,7 @@
                                             <li>ENG</li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li>
+                                    <li><a href="BE/controllers/logout.php">Logout</a> </li>
                                 </ul>
                             </div>
                             <div class="header__logo">
