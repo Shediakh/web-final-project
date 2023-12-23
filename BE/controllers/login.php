@@ -38,7 +38,7 @@ while ($obj = $stmt->fetch(PDO::FETCH_OBJ)) {
     $arr[] = $obj;
 }
 $flag = false; 
-
+$perm = 0;
 for ($i = 0; $i < sizeof($arr); $i++) {
     if($user->un==$arr[$i]->username && $arr[$i]->password===$user->pass) {
         $perm = $arr[$i]->permission;
@@ -46,7 +46,7 @@ for ($i = 0; $i < sizeof($arr); $i++) {
         break;
     }
 }
-
+print_r($arr);
 if($flag) {
     session_start();
     $_SESSION["username"] = $user->un;

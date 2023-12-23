@@ -4,8 +4,6 @@
     if (!isset($_SESSION["username"]) || !isset($_SESSION["permission"])){
         header("location:home.php");
     }
-?>
-<?php
      function DBConnect() {
         $dbhost="127.0.0.1";
         $dbname="manouche";

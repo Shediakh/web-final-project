@@ -2,9 +2,48 @@
     require_once("BE/models/ProductModel.php");
     session_start();
     if (!isset($_SESSION["username"]) || !isset($_SESSION["permission"])){
-        header("location:index.php");
+        header("location:home.php");
     }
+     function DBConnect() {
+        $dbhost="127.0.0.1";
+        $dbname="manouche";
+        $dbuser="root";
+        $dbpass="";
+        $db=null;
+        try {
+            $db = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);		
+        } catch (PDOException $e) {
+            print "Error!: " . $e->getMessage() . "<br/>";
+            $db=null;
+            die();
+        }
+        return $db;
+    }
+
+    function fetchUsers() {
+        $db = DBConnect();
+        $query = "SELECT * FROM users";
+        $stmt=$db->query($query);
+        $arr=array();
+        while ($obj = $stmt->fetch(PDO::FETCH_OBJ)) {
+            $arr[]=$obj;
+        }
+        return $arr;
+    }
+    function changePermission($id, $permission) {
+
+        $db=DBConnect();
+        if($permission == 0) {
+            $query="UPDATE users SET `permission`= 1 WHERE ID=$id";
+        } else if($permission == 1) {
+            $query="UPDATE users SET `permission`= 0 WHERE ID=$id";
+        }
+    //echo $query;
+    $stmt=$db->query($query);
+    }
+    
 ?>
+
 
 <!DOCTYPE html>
 <html lang="zxx">
@@ -15,7 +54,7 @@
     <meta name="keywords" content="Cake, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Product Operations</title>
+    <title>Admin Dashboard</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
@@ -58,7 +97,7 @@
             </div>
         </div>
         <div class="offcanvas__logo">
-            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+            <a href="./home.php"><img src="img/logo.png" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__option">
@@ -87,25 +126,26 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="header__top__left">
-                            <ul>
-                                <li>LBP <span class="arrow_carrot-down"></span>
-                                    <ul>
-                                        <li>LBP</li>
-                                        <li>USD</li>
-                                    </ul>
-                                </li>
-                                <li>ENG <span class="arrow_carrot-down"></span>
-                                    <ul>
-                                        <li>ENG</li>
-                                        <li>ARB</li>
-                                    </ul>
-                                </li>
-                                <!-- <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li> -->
-                            </ul>
-                        </div>
+                        <div class="header__top__inner">
+                            <div class="header__top__left">
+                                <ul>
+                                    <li>USD <span class="arrow_carrot-down"></span>
+                                        <ul>
+                                            <li>EUR</li>
+                                            <li>USD</li>
+                                        </ul>
+                                    </li>
+                                    <li>ENG <span class="arrow_carrot-down"></span>
+                                        <ul>
+                                            <li>Spanish</li>
+                                            <li>ENG</li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li>
+                                </ul>
+                            </div>
                             <div class="header__logo">
-                                <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                                <a href="./homr.php"><img src="img/logo.png" alt=""></a>
                             </div>
                             <div class="header__top__right">
                                 <div class="header__top__right__links">
@@ -128,9 +168,9 @@
                 <div class="col-lg-12">
                     <nav class="header__menu mobile-menu">
                         <ul>       
-                            <li><a href="./index.php">Home</a></li>
-                            <li><a href="./admin-dashboard.php">Admin Dashboard</a></li>
-                            <li class="active"><a href="./contact.php">Contact</a></li>
+                            <li><a href="./home.php">Home</a></li>
+                            <li class="active"><a href="./admin-dashboard.php">Admin Dashboard</a></li>
+                            <li><a href="./contact.php">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -145,13 +185,13 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__text">
-                        <h2>Product Operations</h2>
+                        <h2>Admin Dashboard</h2>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__links">
-                        <a href="./admin-dashboard.php">Back to dashboard</a>
-                        <span>Operations</span>
+                        <a href="./prods.php">Product Operations</a>
+                        <span>Admin Dashboard</span>
                     </div>
                 </div>
             </div>
