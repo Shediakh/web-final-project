@@ -98,7 +98,7 @@
                                         </ul>
                                     </li>
                                     <li><a href="BE/controllers/logout.php">Logout</a> </li>
-                                    
+
                                 </ul>
                             </div>
                             <div class="header__logo">
@@ -447,7 +447,7 @@
             </div>
         </div>
         <div class="map__iframe">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10784.188505644011!2d19.053119335158936!3d47.48899529453826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1543907528304" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.86949468671!2d35.47526121170301!3d33.89301477310573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f10cdf86989f9%3A0x920ea62c8299d366!2sLebanese%20American%20University!5e0!3m2!1sen!2slb!4v1703279882682!5m2!1sen!2slb" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
     <!-- Map End -->

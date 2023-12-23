@@ -1,5 +1,6 @@
 <?php
-    require_once("BE/models/ProductModel.php")
+    require_once("BE/models/ProductModel.php");
+    session_start();
 ?>
 
 <!DOCTYPE html>

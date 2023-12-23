@@ -127,7 +127,7 @@
                 <div class="col-lg-12">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li><a href="./index.php">Home</a></li>
+                            <li><a href="home.php">Home</a></li>
                             <?php
                             if($_SESSION["permission"] == 1) {
                                 echo '<li><a href="./admin-dashboard.php">Admin Dashboard</a></li>';

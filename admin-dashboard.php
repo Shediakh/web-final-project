@@ -28,18 +28,7 @@
             $arr[]=$obj;
         }
         return $arr;
-    }
-    function changePermission($id, $permission) {
-
-        $db=DBConnect();
-        if($permission == 0) {
-            $query="UPDATE users SET `permission`= 1 WHERE ID=$id";
-        } else if($permission == 1) {
-            $query="UPDATE users SET `permission`= 0 WHERE ID=$id";
-        }
-        
-    $stmt=$db->query($query);
-    }
+    }   
     
 ?>
 
@@ -249,13 +238,11 @@
                             ' . $p . '
                         </div>
                         <form action="admin-dashboard.php" method="post">
-                     <input type="submit" name="someAction" value="Change Permission" />
+                     <input type="submit" name="permissionController.php" value="Change Permission" />
+                     <input type="hidden" name="id" value="'.$arr[$i]->id.'"/>
+                     <input type="hidden" name="permission" value="'.$arr[$i]->permission.'"/>
                         </form>
                     </div>';
-                    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['someAction']))
-                    {
-                        changePermission($arr[$i]->id, $arr[$i]->permission);
-                    }
                         }
                 ?>
             </div>
