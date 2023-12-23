@@ -3,7 +3,7 @@
     if (!isset($_SESSION["username"])){
         header("location:home.php");
     }
-     function DBConnect() {
+    function DBConnect(){
         $dbhost="127.0.0.1";
         $dbname="manouche";
         $dbuser="root";
@@ -237,8 +237,8 @@
                         <div class="el">
                             ' . $p . '
                         </div>
-                        <form action="admin-dashboard.php" method="post">
-                     <input type="submit" name="permissionController.php" value="Change Permission" />
+                        <form action="BE/controllers/permissionController.php" method="post">
+                     <input type="submit" name="button" value="Change Permission" />
                      <input type="hidden" name="id" value="'.$arr[$i]->id.'"/>
                      <input type="hidden" name="permission" value="'.$arr[$i]->permission.'"/>
                         </form>
