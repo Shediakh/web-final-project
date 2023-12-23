@@ -53,7 +53,7 @@ function addUser($user)
     }
 }
 if(addUser($user)==1) {
-    header("location: ../../login.php");
+    header("location: ../../index.php");
 }
 
 
